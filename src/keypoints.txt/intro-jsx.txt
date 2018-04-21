@@ -34,3 +34,10 @@ Rendering JSX elements:
 
 (5).The Virtual DOM-One special thing about ReactDOM.render() is that it only updates DOM elements that have changed.
     That means that if you render the exact same thing twice in a row, the second render will do nothing:
+
+*key issues to note*
+    . class in HTML = className in JSX
+    self-closing tags in JSX has to have a slash e.g  <br /> NOT <br>
+    . Any code in between the tags of a JSX element will be read as JSX, not as regular JavaScript!
+      JSX doesn't add numbers - it reads them as text, just like HTML.You can do this by wrapping your code in curly braces.
+      You need a way to write code that says, "Even though I am located in between JSX tags, treat me like ordinary JavaScript and not like JSX.
