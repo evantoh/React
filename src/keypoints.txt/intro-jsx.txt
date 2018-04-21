@@ -1,0 +1,36 @@
+React.js-is a JavaScript library,developed by engineers at Facebook,
+*why use React*
+    1.React is fast-Apps made in React can handle complex updates and still feel quick and responsive.
+    2.React is modular-Instead of writing large, dense files of code, you can write many smaller, reusable files.
+     React's modularity can be a beautiful solution to JavaScript's 
+
+JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.
+"syntax extension" mean?
+In this case, it means that JSX is not valid JavaScript. Web browsers can't read it! therfore,
+That means that before the file reaches a web browser, a JSX compiler will translate any JSX into regular JavaScript.
+
+A basic unit of JSX is called a JSX element.
+JSX elements looks the same as HTML code the only difference is that its contained in JavaScript file
+*RULE TO REMEMBER*
+    a JSX expression must have exactly one outermost element.
+
+Rendering JSX elements:
+    (1).To render a JSX expression means to make it appear onscreen.
+    (2).ReactDOM is the name of a JavaScript library. This library contains several React-specific methods, all of which deal with the DOM in some way or another.
+    (3).ReactDOM.render() is the most common way to render JSX. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds that tree to the DOM. 
+        That is the way to make a JSX expression appear onscreen.
+    (4).passing a variable to ReactDOM.render
+                const toDoList = (
+                                <ol>
+                                    <li>Learn React</li>
+                                    <li>Become a Developer</li>
+                                </ol>
+                                );
+
+                                ReactDOM.render(
+                                toDoList, 
+                                document.getElementById('app')
+                                );
+
+(5).The Virtual DOM-One special thing about ReactDOM.render() is that it only updates DOM elements that have changed.
+    That means that if you render the exact same thing twice in a row, the second render will do nothing:
