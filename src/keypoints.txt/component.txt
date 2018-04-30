@@ -110,3 +110,18 @@ Recall that an event handler is a function that gets called in response to an ev
  In the above example, the event handler is myFunc()
  Notice that the component class has two methods: .myFunc() and .render(). .myFunc() is being used as an event handler.
   .myFunc() will be called any time that a user hovers over the rendered <div></div>.
+
+  **components interacting**
+  class OMG extends React.Component {
+  render() {
+    return <h1>Whooaa!</h1>;
+  }
+}
+
+class Crazy extends React.Component {
+  render() {
+    return <OMG />; //Crazy's render method returns an instance of the OMG component class.
+  }
+}
+If you want to use a variable that's declared in a different file, then you have to import the variable that you want.
+ To import a variable, you can use an import statement:example --import { NavBar(classname) } from './NavBar.js(filename)';--
