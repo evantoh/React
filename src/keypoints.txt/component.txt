@@ -20,14 +20,14 @@ Here's another fact about components: every component must come from a *componen
   (Component class variable names must begin with capital letters!) NOTE
   A component class is like a factory that creates components.
 
-  A render method must contain a return statement. Usually, this return statement returns a JSX expression
+  A render method must contain a return statement. Usually, this return statement returns a JSX expression and some logic which must be added before rendering
   JSX elements can be either HTML-like, or component instances. JSX uses capitalization to distinguish between the two! 
   that is the React-specific reason why component class names must begin with capital letters. 
   In a JSX element, that capitalized first letter says, "I will be a component instance and not an HTML tag.
 
   ***key Notes***
   1.a multi-line JSX expression should always be wrapped in parentheses! 
-  import React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 const redPanda = {
@@ -42,9 +42,9 @@ class RedPanda extends React.Component {
       <div>
         <h1>Cute Red Panda</h1>
         <img 
-          src={redPanda.src}//JavaScript injections use curly braces
+          src={redPanda.src}//JavaScript injections use curly braces since they are JavaScript properties
           alt={redPanda.alt}
-          width={redPanda.width} />
+          width={redPanda.width} />//remember to use self-closing tags
       </div>
     );
   }
