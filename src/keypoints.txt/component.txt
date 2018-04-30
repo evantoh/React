@@ -21,6 +21,7 @@ Here's another fact about components: every component must come from a *componen
   A component class is like a factory that creates components.
 
   A render method must contain a return statement. Usually, this return statement returns a JSX expression and some logic which must be added before rendering
+   should occur inside method render().(common mistake you should avoid)
   JSX elements can be either HTML-like, or component instances. JSX uses capitalization to distinguish between the two! 
   that is the React-specific reason why component class names must begin with capital letters. 
   In a JSX element, that capitalized first letter says, "I will be a component instance and not an HTML tag.
@@ -53,4 +54,27 @@ class RedPanda extends React.Component {
 ReactDOM.render(
   <RedPanda />,
   document.getElementById('app')
+);
+
+  **conditional statements**
+Notice that the if statement is located inside of the render function, but before the return statement.
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class TodaysPlan extends React.Component {
+  render() {
+    let task;
+    if (!apocalypse) {
+      task = 'learn React.js'
+    } else {
+      task = 'run around'
+    }
+
+    return <h1>Today I am going to {task}!</h1>;
+  }
+}
+
+ReactDOM.render(
+	<TodaysPlan />,
+	document.getElementById('app')
 );
