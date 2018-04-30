@@ -78,3 +78,17 @@ ReactDOM.render(
 	<TodaysPlan />,
 	document.getElementById('app')
 );
+
+**use this in components**
+class IceCreamGuy extends React.Component {
+  get food() {
+    return 'ice cream';
+  }
+
+  render() {
+    return <h1>I like {this.food}.</h1>;//this refers to an instance of IceCreamGuy.
+    **explanation**
+    Since this will evaluate to an instance of IceCreamGuy, this.food will evaluate to a call of IceCreamGuy's .
+    food method. This method will, in turn, evaluate to the string "ice cream."You don't need those parentheses because .food is a getter method.
+  }
+}
