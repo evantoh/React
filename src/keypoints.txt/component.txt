@@ -124,4 +124,21 @@ class Crazy extends React.Component {
   }
 }
 If you want to use a variable that's declared in a different file, then you have to import the variable that you want.
- To import a variable, you can use an import statement:example --import { NavBar(classname) } from './NavBar.js(filename)';--
+ To import a variable, you can use an import statement:example --import { NavBar(classname you can pass more than one class,let etc here) } from './NavBar.js(filename)';--
+
+ -export and import are meant to be used together, and you rarely see one without the other.
+ -always place the keyword export immediately before something that you want to export. That something can be any top-level var, let, const, function, or class:
+ -You can export multiple things from the same file:
+- This style of importing and exporting in JavaScript is known as "named exports.
+- When you use named exports, you always need to wrap your imported names in curly braces
+
+export const faveManifestos = {
+  futurist: 'http://www.artype.de/Sammlung/pdf/russolo_noise.pdf',
+  SCUM:     'http://www.ccs.neu.edu/home/shivers/rants/scum.html',
+  cyborg:   'http://faculty.georgetown.edu/irvinem/theory/Haraway-CyborgManifesto-1.pdf'
+};
+
+import { faveManifestos, alsoRan } from './Manifestos';
+
+// Use faveManifestos:
+console.log(`A Cyborg Manifesto:  ${faveManifestos.cyborg}`);
